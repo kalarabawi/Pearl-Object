@@ -1,0 +1,11 @@
+name: Pearl
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: echo "Pearl is ready"
