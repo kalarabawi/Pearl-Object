@@ -6,6 +6,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check
-        run: echo "Pearl is ready"
+      - name: Prepare Pearl
+        run: |
+          echo "Pearl is ready"
+          mkdir -p pearl
+          echo "Pearl Object" > pearl/README.txt
+
+      - name: Save Pearl
+        uses: actions/upload-artifact@v4
+        with:
+          name: pearl-object
+          path: pearl/
